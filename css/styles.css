@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh; /* vh stands for 100% of the viewport's height*/
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat";
+}
+
+.container {
+    height: 430px;
+    width: 580px; 
+    border-radius: 10px;
+    display: flex;
+}
+
+.card1{
+    height: 100%;
+    width: 50%;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px 0 0 10px;
+}
+
+.card2 {
+    background-color: hsl(0, 0%, 100%);
+    height: 100%;
+    width: 50%;
+    border-radius: 0 10px 10px 0;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.product-type {
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    padding-top: 5px;
+    letter-spacing: 5px;
+}
+
+h1 {
+    font-family: Fraunces;
+    font: weight 700px;
+    color: hsl(212, 21%, 14%);
+    padding-top: 20px;
+    line-height: 110%;
+}
+
+.description {
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    padding-top: 20px;
+    line-height: 160%;
+}
+
+.pricing {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.current-price {
+    font-family: Fraunces;
+    font-weight: 700;
+    font-size: 30px;
+    color: hsl(158, 36%, 37%);
+    flex: 1;
+}
+
+.old-price {
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    padding-right: 40px;
+    text-decoration:line-through;
+
+}
+
+button {
+    margin-top: 20px;
+    height: 45px;
+    width: 100%;
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cart-icon{
+    width: 15px;
+    height: 15px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.cart-text{
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+    margin: 20px;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        height:700px;
+        width: 90vw;
+        flex-direction: column;
+    }
+
+    img{
+        width: 90vw;
+        border-radius: 10px 10px 0 0;
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+        transform: translate(0, 25%);
+    }
+    
+
+    .card1,
+    .card2 {
+        width: 90vw;
+        height:35vh;
+        /* position: relative; */
+        border-radius: 0 0 10px 10px;
+    }
+
+    .product-type {
+        padding-top: 0;
+    }
+
+    h1,
+    .description,
+    .pricing {
+        padding-top: 12px;
+    }
+}
